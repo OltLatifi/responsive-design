@@ -1,0 +1,102 @@
+:root{
+  --color-primary-200: #F3EED9;
+  --color-primary-400: #824936;
+  
+  --color-neutral-100: #FFF;
+  --color-neutral-900: #222C2A;
+  
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-accent: 'Bitter', serif;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, p{
+  margin: 0;
+}
+
+h1, h2, h3{
+  color: var(--color-primary-400);
+  line-height: 1;
+  font-family: var(--ff-accent);
+}
+
+h2, h3, p{
+  margin-bottom: 1rem;
+}
+
+body{
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+header, section{
+  padding: 4rem 0;
+}
+@media (min-width: 40em) {
+  header, section{
+    padding: 7rem 0;
+  }
+}
+.split{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split{
+    flex-direction: row;
+  }
+
+  .split > *{
+    flex-basis: 100%;
+  }
+
+  /* every element that has a sibling before it, so only the second column */
+  .split > * + *{
+    margin-left: 2em;
+  }
+}
+
+.container{
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.container--narrow{
+  max-width: 34rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.bg-light{
+  background-color: var(--color-primary-200);
+}
+
+.bg-accent{
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-400);
+}
+
+.bg-dark{
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-900);
+}
+
+.bg-accent h2,
+.bg-dark h2{
+  color: var(--color-primary-200);
+}
